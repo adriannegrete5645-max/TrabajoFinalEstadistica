@@ -1,0 +1,208 @@
+\documentclass[12pt]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{geometry}
+
+\geometry{letterpaper, margin=2.5cm}
+
+\title{Proyecto Final de Estadística y Probabilidad\\
+Análisis de Datos de Irlanda utilizando Python y la API de la OCDE}
+
+\author{Adrian Santiago Negrete Garcia}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+% ============================================
+% INTRODUCCIÓN
+% ============================================
+
+\section{Introducción}
+
+
+En la actualidad, el análisis estadístico y probabilístico representa una herramienta fundamental para la interpretación de información económica, financiera y social. A través de la estadística descriptiva y de los modelos de probabilidad es posible transformar grandes volúmenes de datos en información útil para la toma de decisiones y el análisis cuantitativo.
+
+El presente proyecto tiene como finalidad aplicar distintos métodos estadísticos y probabilísticos utilizando datos reales obtenidos mediante una API pública de la Organización para la Cooperación y el Desarrollo Económicos (OCDE), específicamente relacionados con los planes de pensión en Irlanda. Para ello, se empleó el lenguaje de programación Python como herramienta principal para la extracción, limpieza, procesamiento y representación gráfica de la información.
+
+Dentro del análisis realizado se incluyen medidas de tendencia central, medidas de dispersión, datos agrupados, diagramas de Venn, reglas de conteo, combinaciones, permutaciones, probabilidad condicional, teorema de Bayes, distribuciones de probabilidad discretas y continuas, así como índices de precios de Laspeyres, Paasche y Fisher. Además, se desarrollaron representaciones gráficas que permiten visualizar de manera más clara el comportamiento de los datos analizados.
+
+La utilización de información real permitió comprender de manera práctica la importancia de la estadística y la probabilidad en el análisis de fenómenos económicos y financieros. Asimismo, el proyecto permitió fortalecer habilidades relacionadas con programación, interpretación de resultados y análisis cuantitativo aplicado.
+
+% ============================================
+% MEDIDAS DE TENDENCIA CENTRAL
+% ============================================
+
+\section{Medidas de Tendencia Central}
+
+\subsection{Resultados}
+
+\begin{itemize}
+    \item Media: 18136.8728
+    \item Mediana: 100.0000
+    \item Moda: 0.0000
+\end{itemize}
+
+\subsection{Interpretación}
+
+La media de 18136.87 representa el valor promedio de los registros de planes de pensión en Irlanda obtenidos desde la API de la OCDE. Esto indica que, en promedio, los valores observados dentro del sistema de pensiones irlandés se encuentran alrededor de esa cantidad
+
+La mediana muestra el valor central de los datos y evidencia la existencia de valores extremos dentro del conjunto de información ya que La mediana de 100 muestra que el 50% de los registros se encuentran por debajo de este valor y el otro 50% por encima. La gran diferencia entre la media y la mediana evidencia la presencia de valores extremadamente altos dentro del conjunto de datos.
+
+La moda indica que el valor más frecuente dentro de los registros corresponde a cero, reflejando la presencia de numerosos registros sin aportaciones o valores mínimos en las aportaciones que hacen los adultos mayores en Irlanda.
+
+% ============================================
+% MEDIDAS DE DISPERSIÓN
+% ============================================
+
+\section{Medidas de Dispersión}
+
+\begin{itemize}
+    \item Rango: 492630.0000
+    \item Rango intercuartílico: 7266.3520
+    \item Varianza: 2247845797.0543
+    \item Desviación estándar: 47411.4522
+    \item Desviación media: 26795.9577
+\end{itemize}
+
+\subsection{Interpretación}
+
+El rango de 492630 refleja una gran amplitud entre el valor mínimo y máximo de los datos, lo cual demuestra una alta variabilidad en los registros económicos relacionados con los planes de pensión en Irlanda.
+
+El rango intercuartílico de 7266.35 muestra la dispersión existente en el 50% central de los datos, reduciendo el efecto de valores extremos.
+
+La varianza indica un nivel elevado de dispersión entre los registros analizados, lo que significa que los valores de los planes de pensión presentan diferencias importantes entre sí.
+
+La desviación estándar de 47411.45 confirma que muchos valores se alejan considerablemente de la media, evidenciando heterogeneidad en la información financiera reportada.
+
+La desviación media muestra, en promedio, cuánto se apartan los registros respecto al valor medio del conjunto de datos.
+Las medidas de dispersión muestran una elevada variabilidad en los datos relacionados con los planes de pensión en Irlanda.
+
+% ============================================
+% DIAGRAMA DE VENN
+% ============================================
+
+\section{Diagrama de Venn}
+
+El diagrama de Venn permitió representar gráficamente la relación entre los planes ocupacionales y los planes personales en Irlanda con A  B. La intersección muestra elementos compartidos entre ambos grupos, mientras que las áreas externas representan elementos exclusivos de cada categoría.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Diagrama de VEEN.png}
+\caption{Diagrama de Veen}
+\end{figure}
+
+% ============================================
+% DISTRIBUCIONES
+% ============================================
+
+\section{Distribuciones de Probabilidad}
+
+\subsection{Distribución Binomial}
+
+P(X=3)=0.1172
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{binomial.png}
+\caption{Distribución Binomial}
+\end{figure}
+
+\subsection{Interpretación}
+
+La distribución binomial representa la probabilidad de obtener un número específico de resultados exitosos en una cantidad fija de eventos independientes relacionados con fenómenos estadísticos.
+
+\subsection{Distribución Poisson}
+
+P(X=2)=0.1465
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{poisson.png}
+\caption{Distribución Poisson}
+\end{figure}
+
+\subsection{Interpretación}
+
+La distribución Poisson permite modelar eventos que ocurren de manera aleatoria dentro de un intervalo determinado, siendo útil para analizar frecuencia de ocurrencia en fenómenos económicos y sociales.
+
+\subsection{Distribución Hipergeométrica}
+
+P(X=4)=0.2801
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{hipergeometrica.png}
+\caption{Distribución Hipergeométrica}
+\end{figure}
+
+\subsection{Interpretación}
+
+La distribución hipergeométrica describe probabilidades asociadas a extracciones sin reemplazo, donde cada selección modifica la composición del conjunto original.
+
+\subsection{Distribución Normal}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{DIS Normal.png}
+\caption{Distribución Normal}
+\end{figure}
+
+\subsection{Interpretación}
+
+La distribución normal representa el comportamiento de variables continuas cuyos valores tienden a concentrarse alrededor de un promedio, patrón común en indicadores económicos.
+
+\subsection{Distribución Normal Estándar}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{DIS Normal Estandar.png}
+\caption{Distribución Normal Estándar}
+\end{figure}
+
+\subsection{Interpretación}
+
+La distribución normal estándar permitió calcular el valor Z, el cual indica cuántas desviaciones estándar se encuentra un dato respecto a la media del conjunto analizado.
+
+% ============================================
+% ÍNDICES
+% ============================================
+
+\section{Índices de Precios}
+
+\begin{itemize}
+    \item Índice Laspeyres: 109.1404
+    \item Índice Paasche: 109.1051
+    \item Índice Fisher: 109.1228
+\end{itemize}
+
+\subsection{Interpretación}
+
+El índice Laspeyres mostró la variación de precios utilizando las cantidades del período base, permitiendo comparar el crecimiento de precios respecto al escenario inicial.
+
+El índice Paasche utilizó cantidades del período actual, reflejando cambios en el comportamiento de consumo y variaciones recientes en precios.
+
+El índice Fisher representó un promedio equilibrado entre los índices Laspeyres y Paasche, proporcionando una medida más precisa de la variación general de precios.
+
+% ============================================
+% CONCLUSIÓN
+% ============================================
+
+\section{Conclusión}
+
+El desarrollo de este proyecto permitió aplicar de manera práctica los conocimientos adquiridos en estadística y probabilidad mediante el análisis de datos reales provenientes de la OCDE sobre planes de pensión en Irlanda. A través del uso de Python fue posible automatizar el procesamiento de la información, realizar cálculos estadísticos y generar representaciones gráficas que facilitaron la interpretación de los resultados obtenidos.
+
+Las medidas de tendencia central y dispersión permitieron identificar el comportamiento general de los datos y evidenciar la presencia de valores extremos dentro de la información analizada. Asimismo, las distribuciones de probabilidad ayudaron a comprender distintos modelos matemáticos utilizados para representar fenómenos aleatorios tanto discretos como continuos.
+
+Por otra parte, el cálculo de probabilidades condicionales y la aplicación del teorema de Bayes mostraron cómo es posible analizar relaciones entre eventos y actualizar probabilidades con base en nueva información. De igual manera, los índices de precios de Laspeyres, Paasche y Fisher permitieron comprender la medición de variaciones económicas mediante diferentes metodologías de comparación.
+
+La integración de herramientas tecnológicas como Python y LaTeX facilitó la elaboración de un trabajo más profesional, organizado y visualmente claro. En conclusión, este proyecto permitió reforzar habilidades analíticas, matemáticas y tecnológicas fundamentales para el área de contaduría, economía y análisis de datos.
+\end{document}
